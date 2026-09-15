@@ -2,7 +2,6 @@ package org.firstinspires.ftc.teamcode.TeleOp;
 
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.IMU;
 
@@ -43,12 +42,10 @@ public class MecanumDrive extends OpMode {
     @Override
     public void loop() {
 
-        //now i know where i am thingy
         if (gamepad1.a){
             imu.resetYaw();
         }
 
-        //go to the place thingy
         double forward = gamepad1.left_stick_y;
         double right = -gamepad1.left_stick_x;
         double rotate = -gamepad1.right_stick_x;
